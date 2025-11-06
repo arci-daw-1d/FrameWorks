@@ -1,0 +1,5 @@
+16/4 --> 2 horas crear el API GraphQL y comprobarlo
+
+8-11/5 -> 12 horas crear el Frontend y comprobarlo
+
+   Total 14 horas de desarrollo, tiempo estimado para un alumno 50 horas

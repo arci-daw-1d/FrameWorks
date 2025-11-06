@@ -1,0 +1,31 @@
+
+c:\xampp\php\php.exe composer.phar init
+
+c:\xampp\php\php.exe composer.phar require webonyx/graphql-php
+c:\xampp\php\php.exe composer.phar install
+
+c:\xampp\php\php.exe composer.phar dump-autoload
+
+run server graphql  --> c:\xampp\php\php.exe -S localhost:8001 ./graphql/index.php
+
+Acceso ejemplo:
+curl http://localhost:8081 -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"{hello}\"}"
+curl http://localhost:8081 -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"query {hello}\"}"
+curl http://localhost:8081 -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"query {echo(name:23)}\"}"
+curl http://localhost:8081 -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"mutation {add(id:23)}\"}"
+
+curl http://localhost/public/graphql -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"query {login(email:\\\"a@a\\\",password:\\\"b\\\")}\"}"
+curl http://localhost/public/graphql -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"{logout}\"}" -H "Authorization: Bearer 10|zMcNykkAI1PAHqCEGRTNmu6A8PED4fGnhM8RSYK79c53b6ea"
+
+curl http://localhost/graphql -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"query {login(email:\\\"a@a\\\",password:\\\"b\\\")}\"}" -L
+curl http://localhost/graphql -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"{logout}\"}" -H "Authorization: Bearer 10|zMcNykkAI1PAHqCEGRTNmu6A8PED4fGnhM8RSYK79c53b6ea" -L
+
+
+Tambien se puede acceder a traves del frontend:
+curl http://localhost:8080/graphql/ -H "Content-Type: application/json" -H "Accept: application/json" --data-binary "{\"query\":\"{echo}\"}"
+
+
+  Se ha habilitado en el httpd.conf de apache uno virtualhost para el proyecto
+     http://localhost:8081/  --> graphql
+     http://localhost:8080/  --> frontend
+

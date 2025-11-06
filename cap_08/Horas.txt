@@ -1,0 +1,9 @@
+11/4 --> 1 hora crear el proyecto con ChatGpt
+12/4 --> 2 horas plantillas iniciales y BBDD
+13/4 --> 3 horas sistema de login/logout y registro
+     --> 2 horas sistema de listados y filtrar por nombre y tipo, 
+           mejoras gráficas: se muestra el menú usuario si validado
+                             se muestra el panel de control si validado
+15/4 --> 3 horas: Sistema de reservas
+     --> 1 hora: Retoques para llevar a producción
+   Total 12 horas de desarrollo, tiempo estimado para un alumno 45 horas
